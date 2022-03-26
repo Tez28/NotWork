@@ -2,16 +2,16 @@ const { Category } = require('../models');
 
 const categoryData = [
     {
-        category_name: 'Router',
+        category_name: 'Cisco',
     },
     {
-        category_name: 'Switches',
+        category_name: 'Juniper',
     },
     {
-        category_name: 'Wireless LAN',
+        category_name: 'HPE',
     },
     {
-        category_name: 'Security',
+        category_name: 'Arista',
     },
 ];
 
