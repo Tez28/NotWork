@@ -40,5 +40,9 @@ const equipmentData = [
         equipment_name: '7500R',
         type: 'Router',
         category_id: 4,
-    }
-]
+    },
+];
+
+const seedProducts = () => Product.bulkCreate(productData);
+
+module.exports = seedProducts;
