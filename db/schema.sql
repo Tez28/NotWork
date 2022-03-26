@@ -1,0 +1,6 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS equipment_db;
+
+-- CREATE DATABASE
+CREATE DATABASE equipment_db;
+
