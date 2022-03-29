@@ -3,6 +3,9 @@ const Equipment = require('./Equipment');
 const Category = require('./Category');
 const Tag = require('./Tag');
 const EquipmentTag = require('./EquipmentTag');
+const User = require('./User');
+const Post = require('./Post');
+const Comment = require('./Comment');
 
 // Products belongsTo Category
 Equipment.belongsTo(Category, {
@@ -31,4 +34,27 @@ module.exports = {
   Category,
   Tag,
   EquipmentTag,
+};
+
+
+Post.belongsTo(User, {
+  foreignKey: 'userId',
+  onDelete: 'CASCADE'
+});
+
+Post.hasMany(Comment, {
+  foreignKey: 'postId',
+  onDelete: 'CASCADE'
+});
+
+Comment.belongsTo(User, {
+  foreignKey: 'userId',
+  onDelete: 'CASCADE'
+});
+
+
+module.exports = {
+  User,
+  Comment,
+  Post
 };

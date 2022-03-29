@@ -1,16 +1,14 @@
 const router = require('express').Router();
 const { Category, Equipment } = require('../../models');
 
-
-// gets all categories
 router.get('/', (req, res) => {
     Category.findAll()
-    .then(dbCategoryData => res.json(dbCategoryData))
-    .catch(err => {
+      .then(dbCategoryData => res.json(dbCategoryData))
+      .catch(err => {
         console.log(err);
         res.status(500).json(err);
-    });
-});
+      });
+  });
 
 // gets a single category and its corresponding equipment list
 router.get('/:id', (req, res) => {

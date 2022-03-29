@@ -23,7 +23,7 @@ Equipment.init(
     },
     // define stock column
     type: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       primaryKey: true
     },

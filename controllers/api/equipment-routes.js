@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { UPSERT } = require('sequelize/types/query-types');
 const sequelize = require('../../config/connection.js');
 const { Category, Equipment, Tag, EquipmentTag, Post } = require('../../models');
 
