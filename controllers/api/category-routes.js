@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
       });
   });
 
+
 // gets a single category and its corresponding equipment list
 router.get('/:id', (req, res) => {
     Category.findOne({
@@ -67,7 +68,7 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-module.exports = router
+module.exports = router;
 
 
 

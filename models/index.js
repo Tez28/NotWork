@@ -29,12 +29,7 @@ Tag.belongsToMany(Equipment, {
   foreignKey: 'tag_id'
 });
 
-module.exports = {
-  Equipment,
-  Category,
-  Tag,
-  EquipmentTag,
-};
+
 
 
 Post.belongsTo(User, {
@@ -54,6 +49,10 @@ Comment.belongsTo(User, {
 
 
 module.exports = {
+  Equipment,
+  Category,
+  Tag,
+  EquipmentTag,
   User,
   Comment,
   Post
