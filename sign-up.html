@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/sign-up.css">
+</head>
+<body>
+
+   <!-- header section -->
+   <header>
+       <!-- navigation -->
+    <div class="top-bar" id="appMenu">
+        <div class="top-bar-left">
+            <ul class="menu" data-responsive-menu="accordion">
+                <li><a href="/">Company Name</a></li>
+                <li><a href="#about">About</a></li>
+                <li><input type="search" placeholder="Find your solution..."></li>
+            </ul>
+        </div>
+
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li><a class="button" href="login.html">Login</a></li>
+                <li><a href="sign-up.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- navigation end-->
+   </header>
+   <!-- header end -->
+
+    <div class="container">
+        <form class="log-in-form">
+            <h4 class="text-center">Sign up for an account</h4>
+            <label>Username
+                <input type="text" placeholder="Username">
+            </label>
+            <label>Email
+                <input type="email" placeholder="somebody@example.com">
+            </label>
+            <label>Password
+                <input type="password" placeholder="Password">
+            </label>
+            <input id="show-password" type="checkbox"><label for="show-password">Show password</label>
+            <p><input type="submit" class="button expanded" value="Sign Up"></input></p>
+        </form>
+    </div>
+</body>
+</html>
