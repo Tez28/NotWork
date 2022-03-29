@@ -22,30 +22,34 @@
     <div class="top-bar" id="appMenu">
         <div class="top-bar-left">
             <ul class="menu" data-responsive-menu="accordion">
-                <li class="menu-text">Company Name</li>
-                <li><a href="#about">About</a></li>
+                <li><a href="/">nOtwork</a></li>
+                <li><a href="/about">About</a></li>
                 <li><input type="search" placeholder="Find your solution..."></li>
             </ul>
         </div>
 
         <div class="top-bar-right">
             <ul class="menu">
-                <li><a class="button" href="login.html">Login</a></li>
-                <li><a href="sign-up.html">Sign Up</a></li>
+                {{#if loggedIn}}
+                <li><a class="button" id="logout" href="/logout">Logout</a></li>
+                {{else}}
+                <li><a class="button" href="/login">Login</a></li>
+                {{/if}}
+                <li><a href="/signup">Sign Up</a></li>
             </ul>
         </div>
     </div>
     <!-- navigation end-->
    </header>
    <!-- header end -->
-
+      
    <!-- jumbotron -->
    <div class="callout large">
        <div class="row column text-center">
-        <h1>Placeholder text to grab attention</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
-        <a href="#" class="button large">Placeholder</a>
-        <a href="#" class="button large hollow">Placeholder</a>
+        <h1>nOtwork</h1>
+        <p class="lead">Find Your Network Troubleshooting Solutions Here!</p>
+        <a href="dashboard" class="button large hollow">Dashboard</a>
+        <a href="dashboard" class="button large">Posts</a>
        </div>
    </div>
 
@@ -55,13 +59,16 @@
       <!-- <h2 class="subheader">Such a Simple Blog Layout</h2> -->
     </div>
   </div>
+  <main>
+   {{{ body }}}
+  </main>
   
   <article class="grid-container">
-    <div class="grid-x align-center">
+    {{!-- <div class="grid-x align-center">
       <div class="cell medium-8">
         <div class="blog-post">
           <h3>Template post title 1 <small>3/26/2022</small></h3>
-          <img class="thumbnail" src="https://placehold.it/850x350">
+          <img class="thumbnail" src="https://placehold.it/850x350">          
           <p>Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus.</p>
           <div class="callout">
             <ul class="menu simple">
@@ -71,7 +78,6 @@
           </div>
         </div>
       </div>
-  
       <div class="grid-x align-center">
         <div class="cell medium-8">
           <div class="blog-post">
@@ -86,7 +92,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
     </article>
 
     <footer class="row">
@@ -94,11 +100,16 @@
           <hr/>
           <div class="row">
             <div class="large-6 columns">
-              <p>© Company Name. All rights reserved.</p>
+              <p>© nOtwork. All rights reserved.</p>
             </div>
             </div>
           </div>
         </div>
     </footer>
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+
 </body>
 </html>

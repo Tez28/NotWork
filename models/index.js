@@ -3,6 +3,41 @@ const Equipment = require('./Equipment');
 const Category = require('./Category');
 const Tag = require('./Tag');
 const EquipmentTag = require('./EquipmentTag');
+const User = require('./User');
+const Post = require('./Post');
+const Comment = require('./Comment');
+
+User.hasMany(Post, {
+  foreignKey: 'user_id'
+});
+
+User.hasMany(Comment, {
+  foreignKey: 'user_id',
+  onDelete: 'cascade',
+  hooks: true
+});
+
+Post.hasMany(Comment, {
+  foreignKey: 'post_id',
+  onDelete: 'cascade',
+  hooks: true
+});
+
+Post.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+Comment.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'cascade',
+  hooks: true
+});
+
+Comment.belongsTo(Post, {
+  foreignKey: 'post_id',
+  onDelete: 'cascade',
+  hooks: true
+});
 
 // Products belongsTo Category
 Equipment.belongsTo(Category, {
@@ -31,4 +66,7 @@ module.exports = {
   Category,
   Tag,
   EquipmentTag,
+  User,
+  Post,
+  Comment
 };
