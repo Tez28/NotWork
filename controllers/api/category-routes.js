@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category } = require('../../models');
+const { Category, Equipment } = require('../../models');
 
 
 // gets all categories
@@ -38,7 +38,7 @@ router.get('/:id', (req, res) => {
     });
 });
 // Creates a new category
-router.post('/', withAuth (req, res) => {
+router.post('/', (req, res) => {
     Category.create({
         category_name: req.body.category_name
     })
@@ -46,11 +46,11 @@ router.post('/', withAuth (req, res) => {
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
-    });
+    })
 });
 
 // deletes a category
-router.delete('/:id', withAuth, (req, res) => {
+router.delete('/:id', (req, res) => {
     Category.destroy({
         where: {
             id: req.params.id
