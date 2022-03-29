@@ -25,8 +25,7 @@ Equipment.init(
     type: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
+      primaryKey: true
     },
     // define category_id column
     category_id: {

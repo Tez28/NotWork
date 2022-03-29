@@ -4,3 +4,4 @@ DROP DATABASE IF EXISTS equipment_db;
 -- CREATE DATABASE
 CREATE DATABASE equipment_db;
 
+USE equipment_db;
