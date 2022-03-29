@@ -1,7 +1,7 @@
 const seedCategories = require('./category-seeds');
-const seedProducts = require('./equipment-seeds');
+const seedEquipment = require('./equipment-seeds');
 const seedTags = require('./tag-seeds');
-const seedProductTags = require('./equipment-tag-seeds');
+const seedEquipmentTags = require('./equipment-tag-seeds');
 
 const sequelize = require('../config/connection');
 

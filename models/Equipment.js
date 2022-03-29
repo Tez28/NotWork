@@ -21,7 +21,7 @@ Equipment.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    // define stock column
+    // define  column
     type: {
       type: DataTypes.STRING,
       allowNull: false,
