@@ -1,8 +1,5 @@
-<ul class = "post-options">
-  {{#each post}}
-  <li>
-    <a href="/post/{{id}}"><h3>{{title}}</h3></a>  
-  </li><br>
+
+  {{#each posts}}
+{{> post-info}}
   {{/each}}
 
-</ul>
