@@ -4,3 +4,11 @@
     padding: 0;
     text-align: center;
 }
+
+footer, 
+.login-form, 
+.signup-form, 
+.aha,
+.suinfo {
+    padding: 20px 100px;
+}
