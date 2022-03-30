@@ -3,32 +3,20 @@
   <h2>Your Posts</h2>
   <ol class="existing-posts-list">
     {{#each posts as |post|}}
-    <li>
+    
+    <a href="/dashboard/edit/{{post.id}}" class="edit-link">EDIT POST</a>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">EDIT POST</a>
-    </li><br>
+          <p>Posted in {{post.equipment.category.category_name}} - {{post.equipment.equipment_name}} </p>
+
+      
+    <br>
     {{/each}}
   </ol>
 </section>
 {{/if}}
 
 {{!-- section to create new post(s) --}}
-<section class="row">
-  <div class="column">
-    <h2>Create A New Post</h2>
-    <form class="new-post-form">
-      <div>
-        <label for="post-title">Title</label>
-        <input type="text" id="post-title" name="post-title" />
-      </div>
-      <div>
-        <label for="post-text">Content</label>
-        <textarea id="post-text" name="post-text"></textarea>
-      </div>
-      <button type="submit" class="button">CREATE</button>
-    </form>
-  </div>
-</section>
+
 
 
 

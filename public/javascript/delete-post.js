@@ -1,6 +1,6 @@
 async function deletePostFormHandler(event) {
   event.preventDefault();
-
+console.log('working');
   // searches the 'posts' array for requested id and pulls it for deletion
   const id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
@@ -20,5 +20,5 @@ async function deletePostFormHandler(event) {
 }
 
 document
-  .querySelector('.delete-post-btn')
+  .querySelector('.delete-post')
   .addEventListener('click', deletePostFormHandler);
