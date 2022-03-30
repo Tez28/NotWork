@@ -1,7 +1,9 @@
-<ul>
-  {{#each Category}}
+
+<ul class = "category-options">
+  {{#each categories}}
   <li>
-    {{this}}
+    <a href="/category/{{id}}"><h3>{{category_name}}</h3></a>  
   </li><br>
   {{/each}}
+
 </ul>
