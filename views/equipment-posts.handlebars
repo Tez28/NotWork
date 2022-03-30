@@ -1,5 +1,40 @@
 
+<div class="callout large">       
+  <div class="row column text-center">
+    {{#if posts.length}}
+        <h1>{{equipment.category.category_name}} {{equipment.equipment_name}}</h1>
+       
+    </div>
+    <hr/>
+
+
   {{#each posts}}
 {{> post-info}}
   {{/each}}
 
+  
+  {{else}}
+
+  <h1> No posts made for this equipment yet!</h1>
+  </div>
+
+  {{/if}}
+<hr/>
+<section>
+  <h2>Ask your Own Question</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="post-text">Question</label>
+      <input type="text" id="post-text" name="post-text" />
+    </div>
+    <br/>
+    <button type="submit" class="button">Ask</button>
+  </form>
+</section>
+
+<script src="/javascript/add-post.js"></script>

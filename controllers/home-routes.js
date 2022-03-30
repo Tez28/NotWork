@@ -32,7 +32,6 @@ router.get('/', (req, res) => {
 });
 
 router.get('/posts', (req, res) => {
-    console.log(req.session);
      Category.findAll({
          attributes: [
              'id',
@@ -74,7 +73,6 @@ router.get('/category/:id', (req, res) => {
     const equipment = dbEquipmentData.map((equipment) => equipment.get({ plain: true }));
     const categoryInfo = dbEquipmentData[0].category; 
     const category = categoryInfo.get({ plain: true });
-    console.log(category);
     res.render('category-equipment', {
         equipment,
         category,
@@ -98,15 +96,39 @@ router.get('/equipment/:id', (req, res) => {
             {
             model: User,
             attributes: ['username']
-            }
+            },
+            {
+                model: Equipment,
+                attributes: ['equipment_name', 'type', 'category_id'],
+                include: [
+                    {
+                        model: Category,
+                        attributes: ['id', 'category_name']
+                    }
+                ]
+            },
+            
         ]
     })
     .then(dbPostData => {
         const posts = dbPostData.map((post) => post.get({ plain: true }));
-        res.render('equipment-posts', {
-            posts,
-            loggedIn: req.session.loggedIn
-        });
+        if (!dbPostData.length) {
+            res.render('equipment-posts', {
+                posts,
+                loggedIn: req.session.loggedIn
+            })
+       
+        } else {
+            const equipmentInfo = dbPostData[0].equipment; 
+            const equipment = equipmentInfo.get({ plain: true });
+            res.render('equipment-posts', {
+                posts,
+                equipment,
+                loggedIn: req.session.loggedIn
+            })
+
+        }
+        
     })
     .catch(err => {
         console.log(err);
