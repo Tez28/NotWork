@@ -1,7 +1,9 @@
 const router= require('express').Router();
 const sequelize = require('../config/connection');
 const { Equipment, Category, Tag, EquipmentTag } = require('../models');
+const Post = require('../models/Post');
 
+// gets list of categories
 router.get('/', (req, res) => {
      Category.findAll({
          attributes: [
@@ -27,6 +29,7 @@ router.get('/', (req, res) => {
     })
 });
 
+// lists equipment related to a specific category
 router.get('/category/:id', (req, res) => {
     Equipment.findAll({
         where: {
@@ -45,6 +48,26 @@ router.get('/category/:id', (req, res) => {
     res.status(500).json(err);
 })
 });
+
+// gets posts related to equipment
+router.get('/equipment/:id', (req, res) => {
+    Post.findAll({
+        where: {
+            equipment_id: req.params.id
+        },
+        attributes: ['id', 'title', 'text', 'user_id', 'equipment_id']
+    })
+    .then(dbPostData => {
+        const posts = dbPostData.map((post) => post.get({ plain: true }));
+        res.render('equipment-posts', {
+            posts
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+})
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {

@@ -3,6 +3,7 @@ const Equipment = require('./Equipment');
 const Category = require('./Category');
 const Tag = require('./Tag');
 const EquipmentTag = require('./EquipmentTag');
+const User = require('./User');
 
 // Products belongsTo Category
 Equipment.belongsTo(Category, {
@@ -31,4 +32,6 @@ module.exports = {
   Category,
   Tag,
   EquipmentTag,
+  User,
+
 };
