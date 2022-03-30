@@ -50,8 +50,9 @@ router.get('/:id', (req, res) => {
 // Creates new equipment row
 router.post('/', (req, res) => {
     Equipment.create({
-        equipment_id: req.body.equipment_id,
-        tag_id: req.body.tag_id
+        equipment_name: req.body.equipment_name,
+        type: req.body.type,
+        category_id: req.body.category_id
     })
     .then(dbEquipmentData => res.json(dbEquipmentData))
     .catch(err => {

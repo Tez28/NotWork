@@ -1,8 +1,40 @@
+<div class="callout large">       <div class="row column text-center">
+        <h1>{{category.category_name}} Equipment</h1>
+       
+       </div>
+
 <ul class = "category-options">
   {{#each equipment}}
   <li>
-    <a href="/equipment/{{id}}"><h3>{{equipment_name}}</h3></a>  
+    <a href="/equipment/{{id}}"><h3>{{equipment_name}} - {{type}}</h3></a>  
   </li><br>
   {{/each}}
 
+  {{#if loggedIn}}
+  <p> Don't see what you're looking for? Add your equipment below!</p>
+  <form class="equipment-form">
+  <div>
+    <input class="text-insert" name="equipment-body" placeholder="Type the name of your equipment here"></textarea>
+  </div>
+    <div>
+      <label for="equipment-type">What type of equipment is this?</label>
+    <select name="equipment-type">
+      <option class="type-select" value="Router">Router</option>
+      <option class="type-select" value="Switch">Switch</option>
+      <option class="type-select" value="WAN/LAN">WAN/LAN</option>
+      <option class="type-select" value="Security">Security</option>
+
+
+    </select>
+  </div>
+
+  <div>
+    <button type="submit" class="button">Add Equipment</button>
+
+  </div>
+</form>
+  {{/if}}
+
 </ul>
+
+<script src="/javascript/add-equipment.js"></script>

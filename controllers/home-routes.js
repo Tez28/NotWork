@@ -64,12 +64,20 @@ router.get('/category/:id', (req, res) => {
         where: {
             category_id: req.params.id
         },
-        attributes: ['id', 'equipment_name', 'type', 'category_id']
+        attributes: ['id', 'equipment_name', 'type', 'category_id'],
+        include: {
+            model: Category,
+            attributes: ['id', 'category_name']
+        }
     })
 .then(dbEquipmentData => {
     const equipment = dbEquipmentData.map((equipment) => equipment.get({ plain: true }));
+    const categoryInfo = dbEquipmentData[0].category; 
+    const category = categoryInfo.get({ plain: true });
+    console.log(category);
     res.render('category-equipment', {
         equipment,
+        category,
         loggedIn: req.session.loggedIn
     });
 })
