@@ -107,6 +107,14 @@ router.get('/equipment/:id', (req, res) => {
                     }
                 ]
             },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            }
             
         ]
     })
@@ -154,6 +162,16 @@ router.get('/posts/:id', (req, res) => {
             {
             model: User,
             attributes: ['username']
+            },
+            {
+                model: Equipment,
+                attributes: ['equipment_name', 'type', 'category_id'],
+                include: [
+                    {
+                        model: Category,
+                        attributes: ['id', 'category_name']
+                    }
+                ]
             }
         ]
     })

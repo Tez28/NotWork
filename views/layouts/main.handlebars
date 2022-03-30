@@ -23,14 +23,13 @@
         <div class="top-bar-left">
             <ul class="menu" data-responsive-menu="accordion">
                 <li><a href="/">NotWork</a></li>
-                <li><a href="/about">About</a></li>
-                <li><input type="search" placeholder="Find your solution..."></li>
             </ul>
         </div>
 
         <div class="top-bar-right">
             <ul class="menu">
                  {{#if loggedIn}}
+                 <li><a href="/dashboard">Dashboard</a></li>
                 <li><a class="button" id="logout" href="/">Logout</a></li>
                 {{else}}
                 <li><a class="button" href="/login">Login</a></li>
@@ -53,7 +52,7 @@
 
 
     <footer class="row">
-        <div class="large-12 columns">
+        <div class="large-12 columns text-center">
           <hr/>
           <div class="row">
             <div class="large-6 columns">

@@ -2,8 +2,12 @@
        <div class="row column text-center">
         <h1>NotWork</h1>
         <p class="lead">Find Your Network Troubleshooting Solutions Here!</p>
-        <a href="dashboard" class="button large hollow">Dashboard</a>
-        <a href="dashboard" class="button large">Posts</a>
+        {{#if loggedIn}}
+        <a href="/dashboard" class="button large">My Dashboard</a>
+        {{else}}
+        <a href="/signup" class="button large hollow">Sign Up</a>
+        <a href="/login" class="button large">Log In</a>
+        {{/if}}
        </div>
    </div>
 <div class="callout large primary">

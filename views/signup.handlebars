@@ -1,5 +1,9 @@
 {{!-- USER SIGN-UP --}}
-<form class="signup-form">
+<div class="grid-x">
+  <div class="cell medium-2 large-4"></div>
+  <div class="cell medium-8 large-4">
+<form class="signup-form callout large center">
+  
   <div>
     <label for="username-signup">username</label>
     <input type="text" id="username-signup" autocomplete="on"/>
@@ -15,8 +19,11 @@
   <div>
     <button type="submit">SIGNUP</button>
   </div>
+  <a href="/login" class ="text-center">Already have an account?</a>
+  </div>
+  </div>
 </form>
-
-<a href="/login">Already have an account?</a>
+</div>
+</div>
 
 <script src="/javascript/signup.js"></script>

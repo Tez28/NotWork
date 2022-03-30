@@ -1,8 +1,19 @@
+
+<div class="callout large">       
+  <div class="row column text-center">
+
+        <h1>{{post.equipment.category.category_name}} - {{post.equipment.equipment_name}}</h1>
+       <hr />
+    </div>
+
 {{> post-info post}}
+
 
 {{> comments post.comments}}
 
 {{#if loggedIn}}
+
+<hr/>
 <form class="comment-form">
   <div>
     <textarea name="comment-body" placeholder="Add a new comment"></textarea>
@@ -10,7 +21,7 @@
 
   <div>
     <button type="submit" class="button">Add Comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
+    
   </div>
 </form>
 {{/if}}
@@ -19,5 +30,5 @@
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
+
 {{/if}}

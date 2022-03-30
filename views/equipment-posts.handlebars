@@ -2,7 +2,7 @@
 <div class="callout large">       
   <div class="row column text-center">
     {{#if posts.length}}
-        <h1>{{equipment.category.category_name}} {{equipment.equipment_name}}</h1>
+        <h1>{{equipment.category.category_name}} - {{equipment.equipment_name}}</h1>
        
     </div>
     <hr/>
@@ -20,6 +20,7 @@
 
   {{/if}}
 <hr/>
+{{#if loggedIn}}
 <section>
   <h2>Ask your Own Question</h2>
 
@@ -38,3 +39,4 @@
 </section>
 
 <script src="/javascript/add-post.js"></script>
+{{/if}}

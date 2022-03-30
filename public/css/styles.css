@@ -4,3 +4,22 @@
     padding: 0;
     text-align: center;
 }
+
+/* article.post {
+    background-color: #eff5fa;
+    margin: 15px;
+    padding: 10px;
+} */
+
+select {
+    width: 50%;
+}
+
+input {
+    width: 50%;
+}
+
+.signup-form {
+    margin: auto;
+    margin-top: 30px;
+}
