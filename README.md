@@ -1,4 +1,4 @@
-# NotWork
+# NotWork | Model View Controller (MVC)
 
 ![badge](https://img.shields.io/badge/license-MIT-purple)<br />
 
@@ -39,10 +39,11 @@ If you have an idea that you would like to run by us, please feel free to do so 
 
 ### Questions:
 
-If you have any questions or comments, please feel free to shoot us an email.<br />
+If you have any questions or comments, please feel free to shoot us an email.<br><br>
 
-This project was built using the following languages:<br />
-HTML, CSS, Bootstrap, JavaScript, jQuery, Node
+### <u>This project was built using the following languages/technologies</u>:<br>
+
+HTML, CSS, Foudation CSS 6 Framework, JavaScript, jQuery,<br> Node.js, Express, Handlebars, Express-Session,<br> MySQL, MySQL2, Sequelize ORM, bcrypt, Connect-Session-Sequelize, dotenv.<br><br>
 
 See all of my projects on my GitHub page: https://github.com/wlowrimore
 
