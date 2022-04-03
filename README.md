@@ -20,9 +20,13 @@ No Installation Required!
 
 ### Usage:
 
-<img src="public\images\NotWork.png" alt="landing page"><br>
-<img src="public\images\NotWork-login.png" alt="login page"><br>
-<img src="public\images\NotWork-signup.png" alt="signup page"><br>
+#landing Page
+![NotWork1](https://user-images.githubusercontent.com/92187341/161442256-0d4423d2-9288-4d21-876d-5840104eb53b.png)
+#Login Page
+![NotWork-login](https://user-images.githubusercontent.com/92187341/161442267-00b7b1f0-b1ce-48f5-a0be-7dace79da1bc.png)
+#Sign-up Page
+![NotWork-signup](https://user-images.githubusercontent.com/92187341/161442285-7929a91e-b396-4f9e-950a-c4420ae14ea7.png)
+
 
 You are <a href="https://github.com/DrewSpeed/NotWork" target="_blank">HERE</a>!<br>
 
