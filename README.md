@@ -45,7 +45,7 @@ If you have an idea that you would like to run by us, please feel free to do so 
 
 If you have any questions or comments, please feel free to shoot us an email.<br><br>
 
-### <u>This project was built using the following languages/technologies</u>:<br>
+### <u>Languages/Technologies</u>:<br>
 
 HTML, CSS, Foudation CSS 6 Framework, JavaScript, jQuery,<br> Node.js, Express, Handlebars, Express-Session,<br> MySQL, MySQL2, Sequelize ORM, bcrypt, Connect-Session-Sequelize, dotenv.<br><br>
 
